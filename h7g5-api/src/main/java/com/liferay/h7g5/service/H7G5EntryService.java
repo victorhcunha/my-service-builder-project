@@ -14,6 +14,7 @@
 
 package com.liferay.h7g5.service;
 
+import com.liferay.h7g5.model.H7G5Entry;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
 import com.liferay.portal.kernel.jsonwebservice.JSONWebService;
@@ -47,6 +48,11 @@ public interface H7G5EntryService extends BaseService {
 	 *
 	 * Never modify this interface directly. Add custom service methods to <code>com.liferay.h7g5.service.impl.H7G5EntryServiceImpl</code> and rerun ServiceBuilder to automatically copy the method declarations to this interface. Consume the h7g5 entry remote service via injection or a <code>org.osgi.util.tracker.ServiceTracker</code>. Use {@link H7G5EntryServiceUtil} if injection and service tracking are not available.
 	 */
+	public H7G5Entry addMyCustomH7G5EntryServiceWithPermissionCheck(
+			String description, String name)
+		throws PortalException;
+
+	public void checkEmailAdress() throws PortalException;
 
 	/**
 	 * Returns the OSGi service identifier.

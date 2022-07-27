@@ -1,4 +1,5 @@
 
+
 dependencies {
 	compileOnly group: "com.liferay.portal", name: "release.portal.api"
 	compileOnly project(":h7g5-api")

@@ -14,9 +14,15 @@
 
 package com.liferay.h7g5.service.http;
 
+import com.liferay.h7g5.service.H7G5EntryServiceUtil;
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+
+import java.rmi.RemoteException;
+
 /**
  * Provides the SOAP utility for the
- * <code>com.liferay.h7g5.service.H7G5EntryServiceUtil</code> service
+ * <code>H7G5EntryServiceUtil</code> service
  * utility. The static methods of this class call the same methods of the
  * service utility. However, the signatures are different because it is
  * difficult for SOAP to support certain types.
@@ -56,4 +62,39 @@ package com.liferay.h7g5.service.http;
  */
 @Deprecated
 public class H7G5EntryServiceSoap {
+
+	public static com.liferay.h7g5.model.H7G5EntrySoap
+			addMyCustomH7G5EntryServiceWithPermissionCheck(
+				String description, String name)
+		throws RemoteException {
+
+		try {
+			com.liferay.h7g5.model.H7G5Entry returnValue =
+				H7G5EntryServiceUtil.
+					addMyCustomH7G5EntryServiceWithPermissionCheck(
+						description, name);
+
+			return com.liferay.h7g5.model.H7G5EntrySoap.toSoapModel(
+				returnValue);
+		}
+		catch (Exception exception) {
+			_log.error(exception, exception);
+
+			throw new RemoteException(exception.getMessage());
+		}
+	}
+
+	public static void checkEmailAdress() throws RemoteException {
+		try {
+			H7G5EntryServiceUtil.checkEmailAdress();
+		}
+		catch (Exception exception) {
+			_log.error(exception, exception);
+
+			throw new RemoteException(exception.getMessage());
+		}
+	}
+
+	private static Log _log = LogFactoryUtil.getLog(H7G5EntryServiceSoap.class);
+
 }

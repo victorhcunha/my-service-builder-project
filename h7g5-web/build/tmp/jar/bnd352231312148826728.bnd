@@ -1,0 +1,37 @@
+-add-resource=/home/me/my-service-builder-project/h7g5-web/build/tmp/compileJSP,/home/me/my-service-builder-project/h7g5-web/build/jspc
+Bundle-Name=Liferay H7G5 Web
+libsDirName=libs
+Javac-Debug=on
+-plugin.liferay=com.liferay.ant.bnd.resource.AddResourceVerifierPlugin,com.liferay.ant.bnd.jsp.JspAnalyzerPlugin,com.liferay.ant.bnd.metatype.MetatypePlugin,com.liferay.ant.bnd.npm.NpmAnalyzerPlugin,com.liferay.ant.bnd.resource.bundle.ResourceBundleLoaderAnalyzerPlugin,com.liferay.ant.bnd.sass.SassAnalyzerPlugin,com.liferay.ant.bnd.service.ServiceAnalyzerPlugin,com.liferay.ant.bnd.social.SocialAnalyzerPlugin,aQute.lib.spring.SpringComponent,com.liferay.ant.bnd.spring.SpringDependencyAnalyzerPlugin,com.liferay.ant.bnd.enterprise.EnterpriseAnalyzerPlugin
+docsDirName=docs
+-contract=*
+-metatype=*
+testReportDirName=tests
+Javac-Deprecation=off
+name=h7g5-web
+description=Liferay H7G5 Web
+liferay.workspace.product=portal-7.3-ga7
+distsDirName=distributions
+-fixupmessages.deprecated=annotations are deprecated
+group=my-service-builder-project
+archivesBaseName=com.liferay.h7g5.web
+-donotcopy=(.*.wsdd)
+-plugin.metatype=com.liferay.ant.bnd.metatype.MetatypePlugin
+-fixupmessages.unicode.string=Invalid unicode string
+-jsp=*.jsp,*.jspf,*.jspx
+Bundle-SymbolicName=com.liferay.h7g5.web
+status=integration
+displayName=project '\:h7g5-web'
+-consumer-policy=${replacestring;${range;[\=\=,\=\=]};.*,(.*)];$1}
+testResultsDirName=test-results
+-includeresource.compileInclude=
+path=\:h7g5-web
+-noclassforname=true
+Bundle-Version=1.0.0
+-liferay-service-xml=service.xml,*/service.xml
+-cdiannotations=
+-fixupmessages.classpath.empty=Classpath is empty
+version=1.0.0
+-sass=*
+Javac-Encoding=UTF-8
+-provider-policy=${replacestring;${range;[\=\=,\=\=]};.*,(.*)];$1}

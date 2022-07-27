@@ -1,7 +1,7 @@
 com/liferay/h7g5/service/base/H7G5EntryLocalServiceBaseImpl.java
  com.liferay.h7g5.service.base.H7G5EntryLocalServiceBaseImpl
-com/liferay/h7g5/model/impl/H7G5EntryBaseImpl.java
- com.liferay.h7g5.model.impl.H7G5EntryBaseImpl
+com/liferay/h7g5/service/http/H7G5FolderServiceHttp.java
+ com.liferay.h7g5.service.http.H7G5FolderServiceHttp
 com/liferay/h7g5/service/base/H7G5EntryServiceBaseImpl.java
  com.liferay.h7g5.service.base.H7G5EntryServiceBaseImpl
 com/liferay/h7g5/service/persistence/impl/H7G5FolderPersistenceImpl.java
@@ -30,8 +30,8 @@ com/liferay/h7g5/model/impl/H7G5EntryModelImpl.java
  com.liferay.h7g5.model.impl.H7G5EntryModelImpl$EscapedModelProxyProviderFunctionHolder
 com/liferay/h7g5/model/impl/H7G5EntryCacheModel.java
  com.liferay.h7g5.model.impl.H7G5EntryCacheModel
-com/liferay/h7g5/service/http/H7G5EntryServiceSoap.java
- com.liferay.h7g5.service.http.H7G5EntryServiceSoap
+com/liferay/h7g5/service/base/H7G5FolderServiceBaseImpl.java
+ com.liferay.h7g5.service.base.H7G5FolderServiceBaseImpl
 com/liferay/h7g5/model/impl/H7G5FolderCacheModel.java
  com.liferay.h7g5.model.impl.H7G5FolderCacheModel
 com/liferay/h7g5/service/base/H7G5FolderLocalServiceBaseImpl.java
@@ -42,11 +42,11 @@ com/liferay/h7g5/service/persistence/impl/H7G5EntryPersistenceImpl.java
  com.liferay.h7g5.service.persistence.impl.H7G5EntryPersistenceImpl$H7G5EntryModelArgumentsResolver
 com/liferay/h7g5/service/persistence/impl/constants/OHQIWTSFHLPersistenceConstants.java
  com.liferay.h7g5.service.persistence.impl.constants.OHQIWTSFHLPersistenceConstants
-com/liferay/h7g5/service/http/H7G5FolderServiceHttp.java
- com.liferay.h7g5.service.http.H7G5FolderServiceHttp
-com/liferay/h7g5/service/base/H7G5FolderServiceBaseImpl.java
- com.liferay.h7g5.service.base.H7G5FolderServiceBaseImpl
 com/liferay/h7g5/service/http/H7G5FolderServiceSoap.java
  com.liferay.h7g5.service.http.H7G5FolderServiceSoap
+com/liferay/h7g5/model/impl/H7G5EntryBaseImpl.java
+ com.liferay.h7g5.model.impl.H7G5EntryBaseImpl
 com/liferay/h7g5/service/impl/H7G5FolderServiceImpl.java
  com.liferay.h7g5.service.impl.H7G5FolderServiceImpl
+com/liferay/h7g5/service/http/H7G5EntryServiceSoap.java
+ com.liferay.h7g5.service.http.H7G5EntryServiceSoap
