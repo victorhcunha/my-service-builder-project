@@ -21,6 +21,7 @@ import com.liferay.portal.kernel.jsonwebservice.JSONWebService;
 import com.liferay.portal.kernel.security.access.control.AccessControlled;
 import com.liferay.portal.kernel.service.BaseService;
 import com.liferay.portal.kernel.transaction.Isolation;
+import com.liferay.portal.kernel.transaction.Propagation;
 import com.liferay.portal.kernel.transaction.Transactional;
 
 import org.osgi.annotation.versioning.ProviderType;
@@ -53,6 +54,9 @@ public interface H7G5EntryService extends BaseService {
 		throws PortalException;
 
 	public void checkEmailAdress() throws PortalException;
+
+	@Transactional(propagation = Propagation.SUPPORTS, readOnly = true)
+	public int getH7G5EntriesCount();
 
 	/**
 	 * Returns the OSGi service identifier.

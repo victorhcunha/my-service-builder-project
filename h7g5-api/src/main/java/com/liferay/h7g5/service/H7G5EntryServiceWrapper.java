@@ -69,4 +69,10 @@ public class H7G5EntryServiceWrapper
 
 	private H7G5EntryService _h7g5EntryService;
 
+	@Override
+	public int getH7G5EntriesCount() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

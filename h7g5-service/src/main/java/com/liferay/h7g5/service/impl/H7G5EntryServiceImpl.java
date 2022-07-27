@@ -19,7 +19,7 @@ import com.liferay.portal.aop.AopService;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.security.auth.PrincipalException;
 import com.liferay.portal.kernel.model.User;
-import java.util.Objects; 
+import java.util.Objects;
 import com.liferay.h7g5.model.H7G5Entry;
 
 import org.osgi.service.component.annotations.Component;
@@ -56,6 +56,9 @@ public class H7G5EntryServiceImpl extends H7G5EntryServiceBaseImpl {
 			return h7g5Entry;
 		}
 
+		public int getH7G5EntriesCount(){
+			return h7g5EntryLocalService.getH7G5EntriesCount();
+		}
 
 	public void checkEmailAdress() throws PortalException {
 
