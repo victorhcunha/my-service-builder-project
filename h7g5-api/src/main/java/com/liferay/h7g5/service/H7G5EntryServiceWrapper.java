@@ -47,6 +47,11 @@ public class H7G5EntryServiceWrapper
 		_h7g5EntryService.checkEmailAdress();
 	}
 
+	@Override
+	public int getH7G5EntriesCount() {
+		return _h7g5EntryService.getH7G5EntriesCount();
+	}
+
 	/**
 	 * Returns the OSGi service identifier.
 	 *
@@ -68,11 +73,5 @@ public class H7G5EntryServiceWrapper
 	}
 
 	private H7G5EntryService _h7g5EntryService;
-
-	@Override
-	public int getH7G5EntriesCount() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 
 }

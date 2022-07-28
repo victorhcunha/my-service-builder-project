@@ -48,6 +48,10 @@ public class H7G5EntryServiceUtil {
 		getService().checkEmailAdress();
 	}
 
+	public static int getH7G5EntriesCount() {
+		return getService().getH7G5EntriesCount();
+	}
+
 	/**
 	 * Returns the OSGi service identifier.
 	 *

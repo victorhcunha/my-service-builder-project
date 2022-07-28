@@ -84,6 +84,19 @@ public class H7G5EntryServiceSoap {
 		}
 	}
 
+	public static int getH7G5EntriesCount() throws RemoteException {
+		try {
+			int returnValue = H7G5EntryServiceUtil.getH7G5EntriesCount();
+
+			return returnValue;
+		}
+		catch (Exception exception) {
+			_log.error(exception, exception);
+
+			throw new RemoteException(exception.getMessage());
+		}
+	}
+
 	public static void checkEmailAdress() throws RemoteException {
 		try {
 			H7G5EntryServiceUtil.checkEmailAdress();

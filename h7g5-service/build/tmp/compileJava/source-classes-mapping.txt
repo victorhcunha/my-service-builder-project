@@ -38,15 +38,15 @@ com/liferay/h7g5/model/impl/H7G5FolderCacheModel.java
  com.liferay.h7g5.model.impl.H7G5FolderCacheModel
 com/liferay/h7g5/service/base/H7G5FolderLocalServiceBaseImpl.java
  com.liferay.h7g5.service.base.H7G5FolderLocalServiceBaseImpl
-com/liferay/h7g5/service/base/H7G5EntryServiceBaseImpl.java
- com.liferay.h7g5.service.base.H7G5EntryServiceBaseImpl
+com/liferay/h7g5/service/impl/H7G5FolderServiceImpl.java
+ com.liferay.h7g5.service.impl.H7G5FolderServiceImpl
 com/liferay/h7g5/service/impl/H7G5EntryServiceImpl.java
  com.liferay.h7g5.service.impl.H7G5EntryServiceImpl
 com/liferay/h7g5/service/impl/H7G5EntryLocalServiceImpl.java
  com.liferay.h7g5.service.impl.H7G5EntryLocalServiceImpl
+com/liferay/h7g5/service/base/H7G5EntryServiceBaseImpl.java
+ com.liferay.h7g5.service.base.H7G5EntryServiceBaseImpl
 com/liferay/h7g5/service/http/H7G5EntryServiceHttp.java
  com.liferay.h7g5.service.http.H7G5EntryServiceHttp
-com/liferay/h7g5/service/impl/H7G5FolderServiceImpl.java
- com.liferay.h7g5.service.impl.H7G5FolderServiceImpl
 com/liferay/h7g5/service/http/H7G5EntryServiceSoap.java
  com.liferay.h7g5.service.http.H7G5EntryServiceSoap

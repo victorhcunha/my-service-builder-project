@@ -15,8 +15,9 @@ com/liferay/h7g5/service/H7G5EntryLocalService.java
  com.liferay.h7g5.service.H7G5EntryLocalService
 com/liferay/h7g5/service/H7G5EntryLocalServiceUtil.java
  com.liferay.h7g5.service.H7G5EntryLocalServiceUtil
-com/liferay/h7g5/service/H7G5EntryServiceWrapper.java
- com.liferay.h7g5.service.H7G5EntryServiceWrapper
+com/liferay/h7g5/model/H7G5Entry.java
+ com.liferay.h7g5.model.H7G5Entry
+ com.liferay.h7g5.model.H7G5Entry$1
 com/liferay/h7g5/service/H7G5FolderLocalServiceWrapper.java
  com.liferay.h7g5.service.H7G5FolderLocalServiceWrapper
 com/liferay/h7g5/service/persistence/H7G5FolderUtil.java
@@ -35,8 +36,8 @@ com/liferay/h7g5/service/H7G5FolderLocalServiceUtil.java
  com.liferay.h7g5.service.H7G5FolderLocalServiceUtil
 com/liferay/h7g5/service/H7G5FolderServiceUtil.java
  com.liferay.h7g5.service.H7G5FolderServiceUtil
-com/liferay/h7g5/service/H7G5EntryServiceUtil.java
- com.liferay.h7g5.service.H7G5EntryServiceUtil
+com/liferay/h7g5/model/H7G5FolderSoap.java
+ com.liferay.h7g5.model.H7G5FolderSoap
 com/liferay/h7g5/model/H7G5FolderWrapper.java
  com.liferay.h7g5.model.H7G5FolderWrapper
 com/liferay/h7g5/exception/H7G5FolderNameException.java
@@ -51,8 +52,7 @@ com/liferay/h7g5/exception/NoSuchH7G5EntryException.java
  com.liferay.h7g5.exception.NoSuchH7G5EntryException
 com/liferay/h7g5/model/H7G5FolderModel.java
  com.liferay.h7g5.model.H7G5FolderModel
-com/liferay/h7g5/model/H7G5Entry.java
- com.liferay.h7g5.model.H7G5Entry
- com.liferay.h7g5.model.H7G5Entry$1
-com/liferay/h7g5/model/H7G5FolderSoap.java
- com.liferay.h7g5.model.H7G5FolderSoap
+com/liferay/h7g5/service/H7G5EntryServiceUtil.java
+ com.liferay.h7g5.service.H7G5EntryServiceUtil
+com/liferay/h7g5/service/H7G5EntryServiceWrapper.java
+ com.liferay.h7g5.service.H7G5EntryServiceWrapper

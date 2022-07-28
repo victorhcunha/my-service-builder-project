@@ -93,13 +93,42 @@ public class H7G5EntryServiceHttp {
 		}
 	}
 
+	public static int getH7G5EntriesCount(HttpPrincipal httpPrincipal) {
+		try {
+			MethodKey methodKey = new MethodKey(
+				H7G5EntryServiceUtil.class, "getH7G5EntriesCount",
+				_getH7G5EntriesCountParameterTypes1);
+
+			MethodHandler methodHandler = new MethodHandler(methodKey);
+
+			Object returnObj = null;
+
+			try {
+				returnObj = TunnelUtil.invoke(httpPrincipal, methodHandler);
+			}
+			catch (Exception exception) {
+				throw new com.liferay.portal.kernel.exception.SystemException(
+					exception);
+			}
+
+			return ((Integer)returnObj).intValue();
+		}
+		catch (com.liferay.portal.kernel.exception.SystemException
+					systemException) {
+
+			_log.error(systemException, systemException);
+
+			throw systemException;
+		}
+	}
+
 	public static void checkEmailAdress(HttpPrincipal httpPrincipal)
 		throws com.liferay.portal.kernel.exception.PortalException {
 
 		try {
 			MethodKey methodKey = new MethodKey(
 				H7G5EntryServiceUtil.class, "checkEmailAdress",
-				_checkEmailAdressParameterTypes1);
+				_checkEmailAdressParameterTypes2);
 
 			MethodHandler methodHandler = new MethodHandler(methodKey);
 
@@ -132,7 +161,9 @@ public class H7G5EntryServiceHttp {
 	private static final Class<?>[]
 		_addMyCustomH7G5EntryServiceWithPermissionCheckParameterTypes0 =
 			new Class[] {String.class, String.class};
-	private static final Class<?>[] _checkEmailAdressParameterTypes1 =
+	private static final Class<?>[] _getH7G5EntriesCountParameterTypes1 =
+		new Class[] {};
+	private static final Class<?>[] _checkEmailAdressParameterTypes2 =
 		new Class[] {};
 
 }
