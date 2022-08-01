@@ -1,0 +1,5 @@
+Bundle-Name: Liferay h7g7 Service
+Bundle-SymbolicName: com.liferay.h7g7.service
+Bundle-Version: 1.0.0
+Liferay-Service: true
+-dsannotations-options: inherit
