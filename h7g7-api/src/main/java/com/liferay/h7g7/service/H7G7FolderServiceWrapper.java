@@ -24,7 +24,7 @@ import com.liferay.portal.kernel.service.ServiceWrapper;
  * @generated
  */
 public class H7G7FolderServiceWrapper
-	implements H7G7FolderService, ServiceWrapper<H7G7FolderService> {
+		implements H7G7FolderService, ServiceWrapper<H7G7FolderService> {
 
 	public H7G7FolderServiceWrapper() {
 		this(null);
@@ -32,6 +32,22 @@ public class H7G7FolderServiceWrapper
 
 	public H7G7FolderServiceWrapper(H7G7FolderService h7g7FolderService) {
 		_h7g7FolderService = h7g7FolderService;
+	}
+
+	@Override
+	public com.liferay.h7g7.model.H7G7Folder addMyCustomH77Folder(
+			String description, String name) {
+
+		return _h7g7FolderService.addMyCustomH77Folder(description, name);
+	}
+
+	@Override
+	public H7G7Folder addMyCustomH7G7FolderWithPermissionCheck(
+			String description, String name)
+			throws com.liferay.portal.kernel.exception.PortalException {
+
+		return _h7g7FolderService.addMyCustomH7G7FolderWithPermissionCheck(
+				description, name);
 	}
 
 	/**

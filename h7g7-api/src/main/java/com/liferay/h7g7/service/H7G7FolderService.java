@@ -14,6 +14,7 @@
 
 package com.liferay.h7g7.service;
 
+import com.liferay.h7g7.model.H7G7Folder;
 import com.liferay.portal.kernel.exception.PortalException;
 import com.liferay.portal.kernel.exception.SystemException;
 import com.liferay.portal.kernel.jsonwebservice.JSONWebService;
@@ -36,17 +37,24 @@ import org.osgi.annotation.versioning.ProviderType;
 @AccessControlled
 @JSONWebService
 @ProviderType
-@Transactional(
-	isolation = Isolation.PORTAL,
-	rollbackFor = {PortalException.class, SystemException.class}
-)
+@Transactional(isolation = Isolation.PORTAL, rollbackFor = { PortalException.class, SystemException.class })
 public interface H7G7FolderService extends BaseService {
 
 	/*
 	 * NOTE FOR DEVELOPERS:
 	 *
-	 * Never modify this interface directly. Add custom service methods to <code>com.liferay.h7g7.service.impl.H7G7FolderServiceImpl</code> and rerun ServiceBuilder to automatically copy the method declarations to this interface. Consume the h7g7 folder remote service via injection or a <code>org.osgi.util.tracker.ServiceTracker</code>. Use {@link H7G7FolderServiceUtil} if injection and service tracking are not available.
+	 * Never modify this interface directly. Add custom service methods to
+	 * <code>com.liferay.h7g7.service.impl.H7G7FolderServiceImpl</code> and rerun
+	 * ServiceBuilder to automatically copy the method declarations to this
+	 * interface. Consume the h7g7 folder remote service via injection or a
+	 * <code>org.osgi.util.tracker.ServiceTracker</code>. Use {@link
+	 * H7G7FolderServiceUtil} if injection and service tracking are not available.
 	 */
+	public H7G7Folder addMyCustomH77Folder(String description, String name);
+
+	public H7G7Folder addMyCustomH7G5FolderWithPermissionCheck(
+			String description, String name)
+			throws PortalException;
 
 	/**
 	 * Returns the OSGi service identifier.

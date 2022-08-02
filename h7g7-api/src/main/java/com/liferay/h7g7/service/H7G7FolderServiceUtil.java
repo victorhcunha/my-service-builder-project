@@ -14,6 +14,9 @@
 
 package com.liferay.h7g7.service;
 
+import com.liferay.h7g7.model.H7G7Folder;
+import com.liferay.portal.kernel.exception.PortalException;
+
 /**
  * Provides the remote service utility for H7G7Folder. This utility wraps
  * <code>com.liferay.h7g7.service.impl.H7G7FolderServiceImpl</code> and is an
@@ -31,15 +34,30 @@ public class H7G7FolderServiceUtil {
 	/*
 	 * NOTE FOR DEVELOPERS:
 	 *
-	 * Never modify this class directly. Add custom service methods to <code>com.liferay.h7g7.service.impl.H7G7FolderServiceImpl</code> and rerun ServiceBuilder to regenerate this class.
+	 * Never modify this class directly. Add custom service methods to
+	 * <code>com.liferay.h7g7.service.impl.H7G7FolderServiceImpl</code> and rerun
+	 * ServiceBuilder to regenerate this class.
 	 */
+	public static H7G7Folder addMyCustomH77Folder(
+			String description, String name) {
+
+		return getService().addMyCustomH77Folder(description, name);
+	}
+
+	public static H7G7Folder addMyCustomH7G7FolderWithPermissionCheck(
+			String description, String name)
+			throws PortalException {
+
+		return getService().addMyCustomH7G7FolderWithPermissionCheck(
+				description, name);
+	}
 
 	/**
 	 * Returns the OSGi service identifier.
 	 *
 	 * @return the OSGi service identifier
 	 */
-	public static java.lang.String getOSGiServiceIdentifier() {
+	public static String getOSGiServiceIdentifier() {
 		return getService().getOSGiServiceIdentifier();
 	}
 

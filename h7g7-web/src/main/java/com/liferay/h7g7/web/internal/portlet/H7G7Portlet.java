@@ -40,16 +40,15 @@ public class H7G7Portlet extends GenericPortlet {
 		printWriter.println("Hello, H7G7!");
 
 		System.out.println(
-			"There are " + _h7G7FolderLocalService.getH7G7FoldersCount() +
-				" folders.");
+			"There are " + _h7G7FolderLocalService.getH7G7FoldersCount() + " folders.");
 
-		H7G7Folder h7g7Folder = _h7G7FolderLocalService.createH7G7Folder(
-			System.currentTimeMillis());
+			try {
+				_h7g5EntryService.addMyCustomH7G5EntryServiceWithPermissionCheck(
+					StringUtil.randomString(), 
+					StringUtil.randomString());
+			} catch (Exception e) {
 
-		h7g7Folder.setDescription(StringUtil.randomString());
-		h7g7Folder.setName(StringUtil.randomString());
-
-		_h7G7FolderLocalService.addH7G7Folder(h7g7Folder);
+			}
 
 		System.out.println(
 			"After adding a new folder, there are now " +
