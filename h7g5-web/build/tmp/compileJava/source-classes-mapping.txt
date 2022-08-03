@@ -1,0 +1,2 @@
+com/liferay/h7g5/web/internal/portlet/H7G5Portlet.java
+ com.liferay.h7g5.web.internal.portlet.H7G5Portlet
