@@ -17,17 +17,49 @@ package com.liferay.h7g5.service.impl;
 import com.liferay.h7g5.service.base.H7G5EntryServiceBaseImpl;
 import com.liferay.portal.aop.AopService;
 
+import com.liferay.h7g5.model.H7G5Entry;
+import com.liferay.portal.kernel.exception.PortalException;
+import com.liferay.portal.kernel.security.auth.PrincipalException;
+import com.liferay.portal.kernel.model.User;
+import java.util.Objects;
+
 import org.osgi.service.component.annotations.Component;
 
 /**
  * @author Brian Wing Shun Chan
  */
-@Component(
-	property = {
+@Component(property = {
 		"json.web.service.context.name=ohqiwtsfhl",
 		"json.web.service.context.path=H7G5Entry"
-	},
-	service = AopService.class
-)
+}, service = AopService.class)
 public class H7G5EntryServiceImpl extends H7G5EntryServiceBaseImpl {
+
+	public H7G5Entry addMyCustomH7G5Entry(String description, String name) {
+		System.out.println(
+				"Invoking H7G5EntryServiceImpl#addMyCustomH7G5Entry(" +
+						description + ", " + name + ")");
+
+		H7G5Entry h7g5Entry = h7g5EntryLocalService.createH7G5Entry(
+				System.currentTimeMillis());
+
+		h7g5Entry.setDescription(description);
+		h7g5Entry.setName(name);
+
+		h7g5EntryLocalService.addH7G5Entry(h7g5Entry);
+
+		return h7g5Entry;
+	}
+
+	public H7G5Entry addMyCustomH7G5EntryWithPermissionCheck(
+			String description, String name)
+			throws PortalException {
+
+		User user = getUser();
+
+		if (!Objects.equals(user.getEmailAddress(), "test@liferay.com")) {
+			throw new PrincipalException("You are not test@liferay.com");
+		}
+
+		return addMyCustomH7G5Entry(description, name);
+	}
 }

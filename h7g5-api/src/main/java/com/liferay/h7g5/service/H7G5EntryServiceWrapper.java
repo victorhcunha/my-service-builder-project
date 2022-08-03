@@ -34,6 +34,23 @@ public class H7G5EntryServiceWrapper
 		_h7g5EntryService = h7g5EntryService;
 	}
 
+	@Override
+	public com.liferay.h7g5.model.H7G5Entry addMyCustomH7G5Entry(
+		String description, String name) {
+
+		return _h7g5EntryService.addMyCustomH7G5Entry(description, name);
+	}
+
+	@Override
+	public com.liferay.h7g5.model.H7G5Entry
+			addMyCustomH7G5EntryWithPermissionCheck(
+				String description, String name)
+		throws com.liferay.portal.kernel.exception.PortalException {
+
+		return _h7g5EntryService.addMyCustomH7G5EntryWithPermissionCheck(
+			description, name);
+	}
+
 	/**
 	 * Returns the OSGi service identifier.
 	 *

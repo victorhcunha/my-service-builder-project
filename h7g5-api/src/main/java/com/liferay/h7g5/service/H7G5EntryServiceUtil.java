@@ -14,6 +14,9 @@
 
 package com.liferay.h7g5.service;
 
+import com.liferay.h7g5.model.H7G5Entry;
+import com.liferay.portal.kernel.exception.PortalException;
+
 /**
  * Provides the remote service utility for H7G5Entry. This utility wraps
  * <code>com.liferay.h7g5.service.impl.H7G5EntryServiceImpl</code> and is an
@@ -33,13 +36,26 @@ public class H7G5EntryServiceUtil {
 	 *
 	 * Never modify this class directly. Add custom service methods to <code>com.liferay.h7g5.service.impl.H7G5EntryServiceImpl</code> and rerun ServiceBuilder to regenerate this class.
 	 */
+	public static H7G5Entry addMyCustomH7G5Entry(
+		String description, String name) {
+
+		return getService().addMyCustomH7G5Entry(description, name);
+	}
+
+	public static H7G5Entry addMyCustomH7G5EntryWithPermissionCheck(
+			String description, String name)
+		throws PortalException {
+
+		return getService().addMyCustomH7G5EntryWithPermissionCheck(
+			description, name);
+	}
 
 	/**
 	 * Returns the OSGi service identifier.
 	 *
 	 * @return the OSGi service identifier
 	 */
-	public static java.lang.String getOSGiServiceIdentifier() {
+	public static String getOSGiServiceIdentifier() {
 		return getService().getOSGiServiceIdentifier();
 	}
 
